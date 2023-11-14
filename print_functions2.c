@@ -54,7 +54,7 @@ int print_pointer(va_list types, char buffer[],
 
 /************************* PRINTS NON PRINTABLE *************************/
 /**
- * printf_non_printable - It prints ascii codes in hexa of non printable chars
+ * print_non_printable - It prints ascii codes in hexa of non printable chars
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -63,7 +63,7 @@ int print_pointer(va_list types, char buffer[],
  * @size: Specifiers size
  * Return: Number of chars printed
  */
-int printf_non_printable(va_list types, char buffer[],
+int print_non_printable(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int i = 0, offset = 0;
@@ -94,7 +94,7 @@ int printf_non_printable(va_list types, char buffer[],
 
 /************************* PRINTS REVERSE *************************/
 /**
- * printf_reverse - It prints reverse string.
+ * print_reverse - It prints reverse string.
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -104,7 +104,7 @@ int printf_non_printable(va_list types, char buffer[],
  * Return: Numbers of chars printed
  */
 
-int printf_reverse(va_list types, char buffer[],
+int print_reverse(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char *str;

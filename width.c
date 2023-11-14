@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * printf_width - it calculates the width for printing
+ * get_width - it calculates the width for printing
  * @format: Formatted string in which to print the arguments.
  * @i: List of arguments to be printed.
  * @list: list of arguments.
  *
  * Return: width.
  */
-int printf_width(const char *format, int *i, va_list list)
+int get_width(const char *format, int *i, va_list list)
 {
 	int curr_index;
 	int width = 0;

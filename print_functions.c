@@ -3,7 +3,7 @@
 /************************ PRINTS CHAR ************************/
 
 /**
- * printf_char - It prints a char
+ * print_char - It prints a char
  * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -12,7 +12,7 @@
  * @size: Specifiers size
  * Return: Number of chars printed
  */
-int printf_char(va_list types, char buffer[],
+int print_char(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char c = va_arg(types, int);
@@ -21,7 +21,7 @@ int printf_char(va_list types, char buffer[],
 }
 /************************ PRINTS A STRING ************************/
 /**
- * printf_string - It prints a string
+ * print_string - It prints a string
  * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -30,7 +30,7 @@ int printf_char(va_list types, char buffer[],
  * @size: Specifiers size
  * Return: Number of chars printed
  */
-int printf_string(va_list types, char buffer[],
+int print_string(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int length = 0, i;
@@ -76,7 +76,7 @@ int printf_string(va_list types, char buffer[],
 }
 /*********************** PRINTS PERCENT SIGN ***********************/
 /**
- * printf_percent - It prints a percent sign
+ * print_percent - It prints a percent sign
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -85,7 +85,7 @@ int printf_string(va_list types, char buffer[],
  * @size: Specifiers size
  * Return: Number of chars printed
  */
-int printf_percent(va_list types, char buffer[],
+int print_percent(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	UNUSED(types);
@@ -99,7 +99,7 @@ int printf_percent(va_list types, char buffer[],
 
 /*********************** PRINT INT ***********************/
 /**
- * printf_int - It print int
+ * print_int - It print int
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -108,7 +108,7 @@ int printf_percent(va_list types, char buffer[],
  * @size: Specifiers size
  * Return: Number of chars printed
  */
-int printf_int(va_list types, char buffer[],
+int print_int(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int i = BUFF_SIZE - 2;
@@ -143,7 +143,7 @@ int printf_int(va_list types, char buffer[],
 
 /*********************** PRINTS BINARY ***********************/
 /**
- * printf_bin - It prints an unsigned number
+ * print_binary - It prints an unsigned number
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -152,7 +152,7 @@ int printf_int(va_list types, char buffer[],
  * @size: Specifiers size
  * Return: Numbers of char printed.
  */
-int printf_bin(va_list types, char buffer[],
+int print_binary(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	unsigned int n, m, i, sum;

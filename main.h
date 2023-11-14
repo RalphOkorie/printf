@@ -79,8 +79,8 @@ int print_pointer(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 /* Funciotns to handle other specifiers */
-int get_flags(const char *format, int *i);
-int get_width(const char *format, int *i, va_list list);
+int printf_flags(const char *format, int *i);
+int printf_width(const char *format, int *i, va_list list);
 int printf_precision(const char *format, int *i, va_list list);
 int get_size(const char *format, int *i);
 
@@ -93,23 +93,23 @@ int print_rot13string(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 /* width handler */
-int handle_write_char(char c, char buffer[],
+int handlef_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size);
-int write_number(int is_positive, int ind, char buffer[],
+int writef_number(int is_positive, int ind, char buffer[],
 	int flags, int width, int precision, int size);
-int write_num(int ind, char bff[], int flags, int width, int precision,
+int writef_num(int ind, char bff[], int flags, int width, int precision,
 	int length, char padd, char extra_c);
-int write_pointer(char buffer[], int ind, int length,
+int writef_pointer(char buffer[], int ind, int length,
 	int width, int flags, char padd, char extra_c, int padd_start);
 
-int write_unsgnd(int is_negative, int ind,
+int writef_unsgnd(int is_negative, int ind,
 char buffer[],
 	int flags, int width, int precision, int size);
 
 /****************** UTILS ******************/
-int is_printable(char);
+int printf_printable(char);
 int append_hexa_code(char, char[], int);
-int is_digit(char);
+int check_digit(char);
 
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);

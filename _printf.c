@@ -64,3 +64,24 @@ void print_buffer(char buffer[], int *buff_ind)
 
 	*buff_ind = 0;
 }
+
+int main() {
+    // Test cases
+    printf("OUTPUT: ");
+    int result = _printf("% ");
+    printf("\nRETURN VALUE: %d\n", result);
+
+    printf("OUTPUT: ");
+    result = _printf("%\0");
+    printf("\nRETURN VALUE: %d\n", result);
+
+    printf("OUTPUT: ");
+    result = _printf(NULL);
+    printf("\nRETURN VALUE: %d\n", result);
+
+    printf("OUTPUT: ");
+    result = _printf("%s", NULL);
+    printf("\nRETURN VALUE: %d\n", result);
+
+    return 0;
+}

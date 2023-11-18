@@ -8,10 +8,11 @@
  */
 int is_printable(char c)
 {
+	/* Check if the ASCII value of the character is within the printable range */
 	if (c >= 32 && c < 127)
-		return (1);
+		return (1);/* The character is printable */
 
-	return (0);
+	return (0);/* The character is not printable */
 }
 
 /**

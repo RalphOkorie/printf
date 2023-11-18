@@ -7,9 +7,8 @@
  * Return: 1 if c is printable, 0 otherwise
  */
 int is_printable(char c)
-	/* Check if the ASCII value of the character is within the printable range */
 {
-	
+	/* Check if the ASCII value of the character is within the printable range */
 	if (c >= 32 && c < 127)
 		return (1);/* The character is printable */
 
